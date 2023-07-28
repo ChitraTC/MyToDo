@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Login Here</h1>
+<div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Login">
+        </form>
+
+    <p>New User?<a href="{% url 'register' %}">Register Now!!!</a></p>
+
+</div>
+
+</body>
+</html>
